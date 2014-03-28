@@ -15,6 +15,6 @@ console.log('test-all.js');
 
 // Test for mics. features
 if(gTestList.MISC === true) {
-  console.log('checkDataDir: ' + mIP2CO.checkDataDir());
-  console.log('checkDBFile: ' + mIP2CO.checkDBFile());
+  console.log('dataDirCheck: ' + mIP2CO.dataDirCheck());
+  console.log('dbFileCheck: ' + mIP2CO.dbFileCheck());
 }
