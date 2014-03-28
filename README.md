@@ -32,7 +32,7 @@ npm test
 
 ### Implementation
 
-* [x] IPv4
+* [ ] IPv4
 * [ ] IPv6
 
 ### Notes
