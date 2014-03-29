@@ -29,7 +29,6 @@
     "node >= 0.10.21"
   ],
   "dependencies": {
-    "utilex": "0.2.x",
-    "request": "2.34.x"
+    "utilex": "0.2.x"
   }
 }
