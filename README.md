@@ -30,16 +30,22 @@ npm test
 ```
 ```
 
-### Implementation
-
-* [ ] IPv4
-* [ ] IPv6
-
 ### Notes
 
 * It uses [Webnet77](http://software77.net/geo-ip/) for IP database file. It represents 
 the over 4 billion IPV4 numbers as well as the virtually inexhaustible IPV6 range (3.4e+38).
 There is limit for downloads, for more information see [FAQ](http://software77.net/faq.html)
+
+#### Implementations
+
+* [ ] IPv4
+* [ ] IPv6
+
+#### Permissions
+
+```
+chmod 775 ../ipcountry/data/
+```
 
 ### Changelog
 
