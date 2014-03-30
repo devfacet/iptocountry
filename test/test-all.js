@@ -21,8 +21,9 @@ if(gTestList.MISC === true) {
   console.log('dbFileCheck: ' + mIP2CO.dbFileCheck());
   console.log('dbFileCheck: ' + mIP2CO.dbFileCheck());
   console.log('dbCSVCheck: ' + mIP2CO.dbCSVCheck());
+  console.log('dbCSVCheckExp: ' + mIP2CO.dbCSVCheckExp(24));
 
-  if(!mIP2CO.dbCSVCheck()) {
+  if(mIP2CO.dbCSVCheckExp(24)) {
     mIP2CO.dbGet().then(function() {
       console.log('dbGet: done!');
     }, function(err) {
