@@ -3,7 +3,8 @@
 ### HEAD
 
 ```
-* dbFileGet
+* dbCSVCheck
+* dbGet
 ```
 
 ### 0.0.1 (2014-03-27)

@@ -19,12 +19,14 @@ console.log('test-all.js');
 if(gTestList.MISC === true) {
   console.log('dataDirCheck: ' + mIP2CO.dataDirCheck());
   console.log('dbFileCheck: ' + mIP2CO.dbFileCheck());
+  console.log('dbFileCheck: ' + mIP2CO.dbFileCheck());
+  console.log('dbCSVCheck: ' + mIP2CO.dbCSVCheck());
 
-  if(!mIP2CO.dbFileCheck()) {
-    mIP2CO.dbFileGet().then(function() {
-      console.log('dbFileGet: done!');
+  if(!mIP2CO.dbCSVCheck()) {
+    mIP2CO.dbGet().then(function() {
+      console.log('dbGet: done!');
     }, function(err) {
-      console.log('dbFileGet: ' + err);
+      console.log('dbGet: ' + err);
     });
   }
 }
