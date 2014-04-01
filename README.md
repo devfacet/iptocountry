@@ -28,6 +28,17 @@ npm test
 ```javascript
 var mIP2CO = require('iptocountry');
 
+// Download IP database (48 hours for expiration)
+if(mIP2CO.dbCSVCheckExp(48)) {
+  mIP2CO.dbGet().then(function() {
+    console.log('done!');
+  }, function(err) {
+    console.log(err);
+  });
+}
+// done!
+
+// Search IP addresses
 mIP2CO.ipSearch(['74.125.225.71', '127.0.0.1']).then(function(res) {
   console.log(res);
 }, function(err) {
