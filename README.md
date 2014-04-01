@@ -5,8 +5,6 @@ module for detecting country information of IP addresses without any API call.
 
 iptocountry on [npm registry](http://npmjs.org/package/iptocountry)  
 
-**!!!For your information; iptocountry module is still under heavy development!!!**  
-
 ### Installation
 
 For latest release
@@ -27,7 +25,39 @@ npm test
 ```
 
 #### Example
-```
+```javascript
+var mIP2CO = require('iptocountry');
+
+mIP2CO.ipSearch(['74.125.225.71', '127.0.0.1']).then(function(res) {
+  console.log(res);
+}, function(err) {
+  console.log(err);
+});
+
+/*
+{ data:
+   { '74.125.225.71':
+      { ip: '74.125.225.71',
+        ipNum: 1249763655,
+        registery: 'arin',
+        assigned: '1173744000',
+        coCode2: 'US',
+        coCode3: 'USA',
+        country: 'United States',
+        time: '2007-03-12 20:00:00',
+        found: true },
+     '127.0.0.1':
+      { ip: '127.0.0.1',
+        ipNum: 2130706433,
+        registery: 'iana',
+        assigned: '410227200',
+        coCode2: 'ZZ',
+        coCode3: 'ZZZ',
+        country: 'Reserved',
+        time: '1982-12-31 19:00:00',
+        found: true } },
+  warnings: [] }
+*/
 ```
 
 ### Notes
@@ -38,7 +68,7 @@ There is limit for downloads, for more information see [FAQ](http://software77.n
 
 #### Implementations
 
-* [ ] IPv4
+* [x] IPv4
 * [ ] IPv6
 
 #### Permissions
