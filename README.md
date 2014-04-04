@@ -15,6 +15,7 @@ npm install iptocountry
 For HEAD
 ```
 git clone https://github.com/cmfatih/iptocountry.git
+npm install
 ```
 
 ### Usage
