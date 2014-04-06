@@ -18,7 +18,8 @@ git clone https://github.com/cmfatih/iptocountry.git
 npm install
 ```
 
-Set permission for data folder
+#### Permissions
+
 ```
 chmod 775 ./data/
 ```
