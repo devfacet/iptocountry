@@ -18,6 +18,11 @@ git clone https://github.com/cmfatih/iptocountry.git
 npm install
 ```
 
+Set permission for data folder
+```
+chmod 775 ./data/
+```
+
 ### Usage
 
 #### Test
@@ -82,12 +87,6 @@ There is limit for downloads, for more information see [FAQ](http://software77.n
 
 * [x] IPv4
 * [ ] IPv6
-
-#### Permissions
-
-```
-chmod 775 ../ipcountry/data/
-```
 
 ### Changelog
 
