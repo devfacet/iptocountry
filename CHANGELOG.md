@@ -5,6 +5,10 @@
 ```
 ```
 
+### 0.1.2 (2014-03-31)
+
+* Misc. changes
+
 ### 0.1.1 (2014-03-31)
 
 * Changes for examples
