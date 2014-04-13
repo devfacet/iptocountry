@@ -22,11 +22,6 @@ Permissions
 chmod 775 ./data/
 ```
 
-Install packages
-```
-npm install
-```
-
 ### Usage
 
 #### Test
