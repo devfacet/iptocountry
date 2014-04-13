@@ -52,8 +52,9 @@ if(mIP2CO.dbCSVCheckExp(48)) {
 
 Search IP addresses
 ```javascript
-var ipS = mIP2CO.ipSearch(['74.125.225.71', '98.138.253.109']);
+var mIP2CO = require('iptocountry');
 
+var ipS = mIP2CO.ipSearch(['74.125.225.71', '98.138.253.109']);
 if(!ipS.error) {
   console.log(ipS);
 } else {
