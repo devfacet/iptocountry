@@ -23,16 +23,19 @@ if(gTestList.MISC === true) {
 
   if(mIP2CO.dbCSVCheckExp(48)) {
     mIP2CO.dbGet().then(function() {
-      console.log('dbGet: done!');
+      console.log('dbGet: DONE!');
     }, function(err) {
       console.log('dbGet: ' + err);
     });
   }
 
-  mIP2CO.ipSearch(['74.125.225.71', '127.0.0.1']).then(function(res) {
-    console.log('ipSearch: ');
-    console.log(res);
-  }, function(err) {
-    console.log('ipSearch: ' + err);
-  });
+  console.log('dbLoad: ' + mIP2CO.dbLoad());
+
+  var ipS = mIP2CO.ipSearch(['74.125.225.71', '98.138.253.109']);
+  if(!ipS.error) {
+    console.log('ipSearch: DONE! (' + ipS.timeE + 'ms)');
+    console.log(ipS);
+  } else {
+    console.log('ipSearch: ' + ipS.error);
+  };
 }

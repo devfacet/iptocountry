@@ -15,6 +15,7 @@ npm install iptocountry
 For HEAD
 ```
 git clone https://github.com/cmfatih/iptocountry.git
+cd iptocountry/
 npm install
 ```
 
@@ -32,10 +33,11 @@ npm test
 ```
 
 #### Example
+
+Download IP database if 48 hours passed. This is an example for cron script.
 ```javascript
 var mIP2CO = require('iptocountry');
 
-// Download IP database (48 hours for expiration)
 if(mIP2CO.dbCSVCheckExp(48)) {
   mIP2CO.dbGet().then(function() {
     console.log('done!');
@@ -44,13 +46,19 @@ if(mIP2CO.dbCSVCheckExp(48)) {
   });
 }
 // done!
+```
 
-// Search IP addresses
-mIP2CO.ipSearch(['74.125.225.71', '127.0.0.1']).then(function(res) {
-  console.log(res);
-}, function(err) {
-  console.log(err);
-});
+-
+
+Search IP addresses
+```javascript
+var ipS = mIP2CO.ipSearch(['74.125.225.71', '98.138.253.109']);
+
+if(!ipS.error) {
+  console.log(ipS);
+} else {
+  console.log(ipS.error);
+};
 
 /*
 { data:
@@ -64,17 +72,18 @@ mIP2CO.ipSearch(['74.125.225.71', '127.0.0.1']).then(function(res) {
         country: 'United States',
         time: '2007-03-12 20:00:00',
         found: true },
-     '127.0.0.1':
-      { ip: '127.0.0.1',
-        ipNum: 2130706433,
-        registery: 'iana',
-        assigned: '410227200',
-        coCode2: 'ZZ',
-        coCode3: 'ZZZ',
-        country: 'Reserved',
-        time: '1982-12-31 19:00:00',
+     '98.138.253.109':
+      { ip: '98.138.253.109',
+        ipNum: 1653276013,
+        registery: 'arin',
+        assigned: '1196985600',
+        coCode2: 'US',
+        coCode3: 'USA',
+        country: 'United States',
+        time: '2007-12-06 19:00:00',
         found: true } },
-  warnings: [] }
+  warnings: [],
+  timeE: 115 }
 */
 ```
 
