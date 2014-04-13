@@ -15,14 +15,16 @@ npm install iptocountry
 For HEAD
 ```
 git clone https://github.com/cmfatih/iptocountry.git
-cd iptocountry/
-npm install
 ```
 
-#### Permissions
-
+Permissions
 ```
 chmod 775 ./data/
+```
+
+Install packages
+```
+npm install
 ```
 
 ### Usage
