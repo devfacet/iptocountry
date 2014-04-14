@@ -29,6 +29,13 @@ chmod 775 ./data/
 npm test
 ```
 
+#### HTTP mode
+```
+npm start
+```
+See `http://localhost:12080/search?ip=74.125.225.71` or 
+See `http://localhost:12080/search?ip=74.125.225.71,98.138.253.109`
+
 #### Example
 
 Download IP database if 48 hours passed. This is an example for cron script.
@@ -81,9 +88,22 @@ if(!ipS.error) {
         time: '2007-12-06 19:00:00',
         found: true } },
   warnings: [],
-  timeE: 115 }
+  timeE: 46 }
 */
 ```
+
+-
+
+Listen HTTP requests.
+```javascript
+var mIP2CO = require('iptocountry');
+
+mIP2CO.dbLoad();
+mIP2CO.listenHTTP({hostname: 'localhost', 'port': 12080});
+```
+See `http://localhost:12080/search?ip=74.125.225.71`  
+
+For performance test; `ab -n 1000 http://localhost:12080/search?ip=74.125.225.71`
 
 ### Notes
 

@@ -5,6 +5,12 @@
 ```
 ```
 
+### 0.2.0 (2014-04-13)
+
+* Performance improvement
+* Add HTTP support
+* Use in-memory search instead of file search
+
 ### 0.1.2 (2014-03-31)
 
 * Misc. changes

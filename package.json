@@ -1,10 +1,11 @@
 {
   "name": "iptocountry",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "IP to Country module can be used for detecting country information of IP addresses without any API call.",
   "keywords": [
     "ip",
-    "country"
+    "country",
+    "lookup"
   ],
   "homepage": "http://github.com/cmfatih/iptocountry",
   "repository": {
@@ -23,6 +24,7 @@
   "contributors": [],
   "main": "./lib/iptocountry.js",
   "scripts": {
+    "start": "node ./test/test-http.js",
     "test": "node ./test/test-all.js"
   },
   "engines": [
