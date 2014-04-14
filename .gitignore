@@ -12,3 +12,5 @@ npm-debug.log
 
 data/*
 !data/.gitkeep
+
+*.heapsnapshot
