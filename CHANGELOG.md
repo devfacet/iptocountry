@@ -5,6 +5,10 @@
 ```
 ```
 
+### 0.2.1 (2014-04-21)
+
+* Misc. updates
+
 ### 0.2.0 (2014-04-13)
 
 * Performance improvement

@@ -2,39 +2,39 @@
 /* jslint node: true */
 'use strict';
 
-var mUtilex = require('utilex'),
-    mIP2CO  = require('../')
+var ip2co  = require('../'),
+    utilex = require('utilex')
 ;
 
 // Init vars
-var gConfig = {isHeapdump: false},
-    gArgs   = mUtilex.tidyArgs()
+var appArgs   = utilex.tidyArgs(),  // args
+    appConfig = {isHeapdump: false} // config
 ;
 
-// Check args
-if(typeof gArgs['heapdump'] !== 'undefined') gConfig.isHeapdump = true;
+// config
+if(typeof appArgs['heapdump'] !== 'undefined') appConfig.isHeapdump = true;
 
 // heapdump
-if(gConfig.isHeapdump === true) var mHeapdump = require('heapdump');
+if(appConfig.isHeapdump === true) var heapdump = require('heapdump');
 
 // Tests
-console.log('test-http.js');
+utilex.tidyLog('test-http.js');
 
 // Loads the database and listen http requests.
 function loadAndServe() {
-  mIP2CO.dbLoad();
-  mIP2CO.listenHTTP({hostname: 'localhost', 'port': 12080});
+  ip2co.dbLoad();
+  ip2co.listenHTTP({hostname: 'localhost', 'port': 12080});
 }
 
-if(mIP2CO.dbCSVCheckExp(48)) {
-  mIP2CO.dbGet().then(function() {
+if(ip2co.dbCSVCheckExp(48)) {
+  ip2co.dbGet().then(function() {
     loadAndServe();
   }, function(err) {
-    console.log(err);
+    utilex.tidyLog(err);
   });
 } else {
   loadAndServe();
 }
 
 // heapdump
-if(gConfig.isHeapdump === true) mHeapdump.writeSnapshot(__dirname + '/dump-' + Date.now() + '.heapsnapshot');
+if(appConfig.isHeapdump === true) heapdump.writeSnapshot(__dirname + '/dump-' + Date.now() + '.heapsnapshot');

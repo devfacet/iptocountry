@@ -29,21 +29,22 @@ chmod 775 ./data/
 npm test
 ```
 
-#### HTTP mode
+#### HTTP
 ```
 npm start
 ```
 See `http://localhost:12080/search?ip=74.125.225.71` or 
-See `http://localhost:12080/search?ip=74.125.225.71,98.138.253.109`
+`http://localhost:12080/search?ip=74.125.225.71,98.138.253.109`
 
-#### Example
+#### Examples
 
 Download IP database if 48 hours passed. This is an example for cron script.
-```javascript
-var mIP2CO = require('iptocountry');
 
-if(mIP2CO.dbCSVCheckExp(48)) {
-  mIP2CO.dbGet().then(function() {
+```javascript
+var ip2co = require('iptocountry');
+
+if(ip2co.dbCSVCheckExp(48)) {
+  ip2co.dbGet().then(function() {
     console.log('done!');
   }, function(err) {
     console.log(err);
@@ -51,55 +52,59 @@ if(mIP2CO.dbCSVCheckExp(48)) {
 }
 // done!
 ```
-
 -
 
 Search IP addresses
-```javascript
-var mIP2CO = require('iptocountry');
 
-var ipS = mIP2CO.ipSearch(['74.125.225.71', '98.138.253.109']);
+```javascript
+var ip2co = require('iptocountry');
+
+var ipS = ip2co.ipSearch(['74.125.225.71', '98.138.253.109']);
 if(!ipS.error) {
-  console.log(ipS);
+  console.log(JSON.stringify(ipS, null, 2));
 } else {
   console.log(ipS.error);
 };
 
 /*
-{ data:
-   { '74.125.225.71':
-      { ip: '74.125.225.71',
-        ipNum: 1249763655,
-        registery: 'arin',
-        assigned: '1173744000',
-        coCode2: 'US',
-        coCode3: 'USA',
-        country: 'United States',
-        time: '2007-03-12 20:00:00',
-        found: true },
-     '98.138.253.109':
-      { ip: '98.138.253.109',
-        ipNum: 1653276013,
-        registery: 'arin',
-        assigned: '1196985600',
-        coCode2: 'US',
-        coCode3: 'USA',
-        country: 'United States',
-        time: '2007-12-06 19:00:00',
-        found: true } },
-  warnings: [],
-  timeE: 46 }
+{
+  "data": {
+    "74.125.225.71": {
+      "ip": "74.125.225.71",
+      "ipNum": 1249763655,
+      "registery": "arin",
+      "assigned": "1173744000",
+      "coCode2": "US",
+      "coCode3": "USA",
+      "country": "United States",
+      "time": "2007-03-13 00:00:00",
+      "found": true
+    },
+    "98.138.253.109": {
+      "ip": "98.138.253.109",
+      "ipNum": 1653276013,
+      "registery": "arin",
+      "assigned": "1196985600",
+      "coCode2": "US",
+      "coCode3": "USA",
+      "country": "United States",
+      "time": "2007-12-07 00:00:00",
+      "found": true
+    }
+  },
+  "warnings": [],
+  "timeE": 51
+}
 */
 ```
-
 -
 
 Listen HTTP requests.
 ```javascript
-var mIP2CO = require('iptocountry');
+var ip2co = require('iptocountry');
 
-mIP2CO.dbLoad();
-mIP2CO.listenHTTP({hostname: 'localhost', 'port': 12080});
+ip2co.dbLoad();
+ip2co.listenHTTP({hostname: 'localhost', 'port': 12080});
 ```
 See `http://localhost:12080/search?ip=74.125.225.71`  
 
