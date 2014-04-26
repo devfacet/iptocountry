@@ -61,11 +61,11 @@ Search IP addresses
 ```javascript
 var ip2co = require('iptocountry');
 
-var ipS = ip2co.ipSearch(['74.125.225.71', '98.138.253.109']);
-if(!ipS.error) {
-  console.log(JSON.stringify(ipS, null, 2));
+var ipSearch = ip2co.ipSearch(['74.125.225.71', '98.138.253.109']);
+if(!ipSearch.error) {
+  console.log(JSON.stringify(ipSearch, null, 2));
 } else {
-  console.log(ipS.error);
+  console.log(ipSearch.error);
 };
 
 /*
