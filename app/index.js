@@ -12,10 +12,10 @@ var appArgs   = utilex.tidyArgs(),  // args
 ;
 
 // config
-if(typeof appArgs['heapdump'] !== 'undefined') appConfig.isHeapdump = true;
-
-// heapdump
-if(appConfig.isHeapdump === true) var heapdump = require('heapdump');
+if(typeof appArgs['heapdump'] !== 'undefined') {
+  var heapdump = require('heapdump');
+  appConfig.isHeapdump = true;
+}
 
 // Loads the database and listen http requests.
 function loadAndServe() {
@@ -34,4 +34,6 @@ if(ip2co.dbCSVCheckExp(48)) {
 }
 
 // heapdump
-if(appConfig.isHeapdump === true) heapdump.writeSnapshot(__dirname + '/dump-' + Date.now() + '.heapsnapshot');
+if(appConfig.isHeapdump === true) {
+  heapdump.writeSnapshot(__dirname + '/dump-' + Date.now() + '.heapsnapshot');
+}
