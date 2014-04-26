@@ -4,6 +4,7 @@
 module for detecting country information of IP addresses without any API call.
 
 iptocountry on [npm registry](http://npmjs.org/package/iptocountry)  
+[![NPM](https://nodei.co/npm/iptocountry.png?compact=true)](https://nodei.co/npm/iptocountry/)
 
 ### Installation
 
