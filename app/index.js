@@ -17,9 +17,6 @@ if(typeof appArgs['heapdump'] !== 'undefined') appConfig.isHeapdump = true;
 // heapdump
 if(appConfig.isHeapdump === true) var heapdump = require('heapdump');
 
-// Tests
-utilex.tidyLog('test-http.js');
-
 // Loads the database and listen http requests.
 function loadAndServe() {
   ip2co.dbLoad();

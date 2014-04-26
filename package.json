@@ -24,8 +24,8 @@
   "contributors": [],
   "main": "./lib/iptocountry.js",
   "scripts": {
-    "start": "node ./test/test-http.js",
-    "test": "node ./test/test-all.js"
+    "start": "node app/index.js",
+    "test": "node test/test-all.js"
   },
   "engines": [
     "node >= 0.10.21"
