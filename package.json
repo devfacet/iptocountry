@@ -33,5 +33,9 @@
   "dependencies": {
     "utilex": "0.2.x",
     "q": "1.x.x"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
   }
 }
