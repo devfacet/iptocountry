@@ -31,7 +31,7 @@ chmod 775 ./data/
 npm test
 ```
 
-#### HTTP
+#### Start
 ```
 npm start
 ```
