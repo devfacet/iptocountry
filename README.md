@@ -56,7 +56,7 @@ if(ip2co.dbCSVCheckExp(48)) {
 ```
 -
 
-Search IP addresses
+Search IP addresses. This is an example for library usage.
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -101,7 +101,8 @@ if(!ipSearch.error) {
 ```
 -
 
-Listen HTTP requests.
+Listen HTTP requests. This is an example for REST API.
+
 ```javascript
 var ip2co = require('iptocountry');
 
