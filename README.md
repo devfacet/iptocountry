@@ -17,6 +17,7 @@ For HEAD
 ```
 git clone https://github.com/cmfatih/iptocountry.git
 ```
+[![Build Status](https://travis-ci.org/cmfatih/iptocountry.svg?branch=master)](https://travis-ci.org/cmfatih/iptocountry)
 
 Permissions
 ```
