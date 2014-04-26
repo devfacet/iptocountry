@@ -25,7 +25,7 @@
   "main": "./lib/iptocountry.js",
   "scripts": {
     "start": "node app/index.js",
-    "test": "node test/test-all.js"
+    "test": "node node_modules/mocha/bin/mocha --reporter spec test/test-all.js"
   },
   "engines": [
     "node >= 0.10.21"
