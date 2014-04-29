@@ -4,7 +4,9 @@
 module for detecting country information of IP addresses without any API call.
 
 iptocountry on [npm registry](http://npmjs.org/package/iptocountry)  
-[![NPM](https://nodei.co/npm/iptocountry.png?compact=true)](https://nodei.co/npm/iptocountry/)
+
+[![NPM][npm-image]][npm-url] | [![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url]
+---------- | ---------- | ---------- |
 
 ### Installation
 
@@ -17,7 +19,6 @@ For HEAD
 ```
 git clone https://github.com/cmfatih/iptocountry.git
 ```
-[![Build Status](https://travis-ci.org/cmfatih/iptocountry.svg?branch=master)](https://travis-ci.org/cmfatih/iptocountry)
 
 Permissions
 ```
@@ -133,3 +134,12 @@ For all notable changes see [CHANGELOG.md](https://github.com/cmfatih/iptocountr
 Copyright (c) 2014 Fatih Cetinkaya (http://github.com/cmfatih/iptocountry)  
 Licensed under The MIT License (MIT)  
 For the full copyright and license information, please view the LICENSE.txt file.
+
+[npm-url]: http://npmjs.org/package/iptocountry
+[npm-image]: https://nodei.co/npm/iptocountry.png?compact=true
+
+[travis-url]: https://travis-ci.org/cmfatih/iptocountry
+[travis-image]: https://travis-ci.org/cmfatih/iptocountry.svg?branch=master
+
+[depstatus-url]: https://david-dm.org/cmfatih/iptocountry
+[depstatus-image]: https://david-dm.org/cmfatih/iptocountry.png
