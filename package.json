@@ -1,6 +1,6 @@
 {
   "name": "iptocountry",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "IP to Country module can be used for detecting country information of IP addresses without any API call.",
   "keywords": [
     "ip",

@@ -3,8 +3,13 @@
 ### HEAD
 
 ```
-* Add Dependency Status
 ```
+
+### 0.2.3 (2014-04-29)
+
+* Add limit for IP addresses (HTTP)
+* Add --listen-http option
+* Add Dependency Status
 
 ### 0.2.2 (2014-04-26)
 
