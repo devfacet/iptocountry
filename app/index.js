@@ -7,8 +7,16 @@ var ip2co  = require('../'),
 ;
 
 // Init vars
-var appArgs   = utilex.tidyArgs(),  // args
-    appConfig = {isHeapdump: false} // config
+var appArgs         = utilex.tidyArgs(),  // args
+    appConfig       = {                   // config
+      isHeapdump:   false,
+      listenOpt:    {
+        http: {
+          hostname: 'localhost', 
+          port:     12080
+        }
+      }
+    }
 ;
 
 // config
@@ -17,10 +25,18 @@ if(typeof appArgs['heapdump'] !== 'undefined') {
   appConfig.isHeapdump = true;
 }
 
+if(typeof appArgs['listen-http'] !== 'undefined') {
+  var httpAddr = ('' + appArgs['listen-http']).split(':', 2);
+  if(httpAddr[0]) {
+    appConfig.listenOpt.http.hostname  = httpAddr[0].trim();
+    appConfig.listenOpt.http.port      = (httpAddr[1] || null);
+  }
+}
+
 // Loads the database and listen http requests.
 function loadAndServe() {
   ip2co.dbLoad();
-  ip2co.listenHTTP({hostname: 'localhost', 'port': 12080});
+  ip2co.listenHTTP({hostname: appConfig.listenOpt.http.hostname, port: appConfig.listenOpt.http.port});
 }
 
 if(ip2co.dbCSVCheckExp(48)) {
