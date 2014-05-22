@@ -1,6 +1,6 @@
 {
   "name": "iptocountry",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "IP to Country module can be used for detecting country information of IP addresses without any API call.",
   "keywords": [
     "ip",
@@ -32,7 +32,7 @@
   ],
   "dependencies": {
     "utilex": "0.2.x",
-    "q": "1.x.x"
+    "q": "1.0.x"
   },
   "devDependencies": {
     "chai": "*",
