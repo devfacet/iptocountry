@@ -93,10 +93,7 @@ describe('iptocountry', function() {
         }
 
         done();
-      });      
+      });
     }
   });
-
-  if(ip2co.dbCSVCheckExp(48)) {
-  }
 });

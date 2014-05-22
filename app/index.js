@@ -6,17 +6,8 @@ var ip2co  = require('../'),
     utilex = require('utilex')
 ;
 
-// Init vars
-var appArgs         = utilex.tidyArgs(),  // args
-    appConfig       = {                   // config
-      isHeapdump:   false,
-      listenOpt:    {
-        http: {
-          hostname: 'localhost', 
-          port:     12080
-        }
-      }
-    }
+var appArgs   = utilex.tidyArgs(),
+    appConfig = {isHeapdump: false, listenOpt: {http: {hostname: '0.0.0.0', port: 12080}}}
 ;
 
 // config
