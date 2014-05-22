@@ -1,12 +1,10 @@
 ## IP to Country
 
-[iptocountry](http://github.com/cmfatih/iptocountry) is a [node.js](http://nodejs.org) 
-module for detecting country information of IP addresses without any API call.
+[iptocountry](http://github.com/cmfatih/iptocountry) is a Node.js module for 
+detecting country information of IP addresses without any API call.  
 
-iptocountry on [npm registry](http://npmjs.org/package/iptocountry)  
-
-[![NPM][npm-image]][npm-url] | [![Build Status][travis-image]][travis-url] | [![Dependency Status][depstatus-image]][depstatus-url]
----------- | ---------- | ---------- |
+[![Build Status][travis-image]][travis-url] | [![NPM][npm-image]][npm-url]
+---------- | ----------
 
 ### Installation
 
@@ -122,8 +120,8 @@ There is limit for downloads, for more information see [FAQ](http://software77.n
 
 #### Implementations
 
-* [x] IPv4
-* [ ] IPv6
+- [x] IPv4
+- [ ] IPv6
 
 ### Changelog
 
@@ -136,10 +134,7 @@ Licensed under The MIT License (MIT)
 For the full copyright and license information, please view the LICENSE.txt file.
 
 [npm-url]: http://npmjs.org/package/iptocountry
-[npm-image]: https://nodei.co/npm/iptocountry.png?compact=true
+[npm-image]: https://badge.fury.io/js/iptocountry.png
 
 [travis-url]: https://travis-ci.org/cmfatih/iptocountry
 [travis-image]: https://travis-ci.org/cmfatih/iptocountry.svg?branch=master
-
-[depstatus-url]: https://david-dm.org/cmfatih/iptocountry
-[depstatus-image]: https://david-dm.org/cmfatih/iptocountry.png
