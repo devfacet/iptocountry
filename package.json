@@ -22,7 +22,7 @@
     "url": "http://github.com/cmfatih"
   },
   "contributors": [],
-  "main": "./lib/iptocountry.js",
+  "main": "lib/iptocountry.js",
   "scripts": {
     "start": "node app/index.js",
     "test": "node node_modules/mocha/bin/mocha --reporter spec test/test-all.js"
@@ -31,7 +31,7 @@
     "node >= 0.10.21"
   ],
   "dependencies": {
-    "utilex": "0.2.x",
+    "utilex": "1.0.x",
     "q": "1.0.x"
   },
   "devDependencies": {

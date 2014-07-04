@@ -5,7 +5,7 @@
 var ip2co  = require('../'),
     utilex = require('utilex');
 
-var appArgs   = utilex.tidyArgs(),
+var appArgs   = utilex.appArgs(),
     appConfig = {isHeapdump: false, listenOpt: {http: {hostname: '0.0.0.0', port: 12080}}};
 
 // config
@@ -32,7 +32,7 @@ if(ip2co.dbCSVCheckExp(48)) {
   ip2co.dbGet().then(function() {
     loadAndServe();
   }, function(err) {
-    utilex.tidyLog(err);
+    utilex.conLog(err);
   });
 } else {
   loadAndServe();
