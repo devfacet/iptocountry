@@ -5,12 +5,11 @@
 'use strict';
 
 var ip2co  = require('../'),
-    expect = require('chai').expect
-;
+    expect = require('chai').expect;
 
 // Tests
 
-// Test for iptocountry module
+// Test for the module
 describe('iptocountry', function() {
 
   describe('dataDirCheck', function() {
@@ -64,10 +63,7 @@ describe('iptocountry', function() {
     if(ip2co.dbCSVCheck()) {
       it('should search and find IP addresses', function(done) {
 
-        if(ipSearch.error) {
-          done(ipSearch.error);
-          return;
-        }
+        if(ipSearch.error) return done(ipSearch.error);
 
         var ipToCheck = '74.125.225.71';
         expect(ipSearch).to.be.a('object');
@@ -87,10 +83,7 @@ describe('iptocountry', function() {
       });
     } else {
       it('ipSearch() should fail due missing database file (' + ipSearch.error + ')', function(done) {
-        if(!ipSearch.error) {
-          done('Should give error!');
-          return;
-        }
+        if(!ipSearch.error) return done('Should give error!');
 
         done();
       });

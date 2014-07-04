@@ -3,12 +3,10 @@
 'use strict';
 
 var ip2co  = require('../'),
-    utilex = require('utilex')
-;
+    utilex = require('utilex');
 
 var appArgs   = utilex.tidyArgs(),
-    appConfig = {isHeapdump: false, listenOpt: {http: {hostname: '0.0.0.0', port: 12080}}}
-;
+    appConfig = {isHeapdump: false, listenOpt: {http: {hostname: '0.0.0.0', port: 12080}}};
 
 // config
 if(typeof appArgs['heapdump'] !== 'undefined') {
