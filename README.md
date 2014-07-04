@@ -1,10 +1,8 @@
 ## IP to Country
+[![NPM][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 [iptocountry](http://github.com/cmfatih/iptocountry) is a Node.js module for 
 detecting country information of IP addresses without any API call.  
-
-[![Build Status][travis-image]][travis-url] | [![NPM][npm-image]][npm-url]
----------- | ----------
 
 ### Installation
 
@@ -18,11 +16,6 @@ For HEAD
 git clone https://github.com/cmfatih/iptocountry.git
 ```
 
-Permissions
-```
-chmod 775 ./data/
-```
-
 ### Usage
 
 #### Test
@@ -30,7 +23,7 @@ chmod 775 ./data/
 npm test
 ```
 
-#### Start
+#### Start RESTful API
 ```
 npm start
 ```
@@ -39,7 +32,7 @@ See `http://localhost:12080/search?ip=74.125.225.71` or
 
 #### Examples
 
-Download IP database if 48 hours passed. This is an example for cron script.
+**Download IP database if 48 hours passed. This is an example for cron script.**
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -53,9 +46,8 @@ if(ip2co.dbCSVCheckExp(48)) {
 }
 // done!
 ```
--
 
-Search IP addresses. This is an example for library usage.
+**Search IP addresses. This is an example for library usage.**
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -98,9 +90,8 @@ if(!ipSearch.error) {
 }
 */
 ```
--
 
-Listen HTTP requests. This is an example for REST API.
+**Listen HTTP requests. This is an example for REST API.**
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -129,7 +120,6 @@ For all notable changes see [CHANGELOG.md](https://github.com/cmfatih/iptocountr
 
 ### License
 
-Copyright (c) 2014 Fatih Cetinkaya (http://github.com/cmfatih/iptocountry)  
 Licensed under The MIT License (MIT)  
 For the full copyright and license information, please view the LICENSE.txt file.
 

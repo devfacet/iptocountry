@@ -1,6 +1,6 @@
 {
   "name": "iptocountry",
-  "version": "0.2.4",
+  "version": "1.0.0",
   "description": "IP to Country module can be used for detecting country information of IP addresses without any API call.",
   "keywords": [
     "ip",
@@ -28,14 +28,14 @@
     "test": "node node_modules/mocha/bin/mocha --reporter spec test/test-all.js"
   },
   "engines": [
-    "node >= 0.10.21"
+    "node >= 0.10.0"
   ],
   "dependencies": {
     "utilex": "1.0.x",
     "q": "1.0.x"
   },
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*"
+    "mocha": "1.20.x",
+    "chai": "1.9.x"
   }
 }

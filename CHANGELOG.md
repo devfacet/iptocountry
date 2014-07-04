@@ -1,9 +1,9 @@
 ## Changelog
 
-### HEAD
+### 1.0.0 (2014-07-04)
 
-```
-```
+* Stable release
+* Update utilex module
 
 ### 0.2.4 (2014-05-22)
 
