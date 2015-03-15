@@ -1,7 +1,5 @@
-// Init reqs
 /* jslint node: true */
-/* global describe: false */
-/* global it: false */
+/* global describe: false, it: false */
 'use strict';
 
 var ip2co  = require('../'),
@@ -9,7 +7,6 @@ var ip2co  = require('../'),
 
 // Tests
 
-// Test for the module
 describe('iptocountry', function() {
 
   describe('dataDirCheck', function() {
