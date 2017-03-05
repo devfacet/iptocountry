@@ -1,6 +1,6 @@
 {
   "name": "iptocountry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A module for detecting country information of IP addresses without any API call",
   "main": "lib/iptocountry.js",
   "scripts": {
