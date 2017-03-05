@@ -1,16 +1,17 @@
-node_modules/
-npm-debug.log
-
 .DS_Store
-.idea
+Thumbs.db
 
 *.log
-*.heapsnapshot
-.coverrun
-.coverdata
-dump.rdb
-xunit.xml
+*.exe
+*.prof
+*.out
 
+tmp/
+logs/
+reports/
+releases/
+vendor/
+node_modules/
 sources/
 
 data/*

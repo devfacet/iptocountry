@@ -1,25 +1,27 @@
-## IP to Country
+# IP to Country
 
 [![NPM][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 IP to Country is a module for detecting country information of IP addresses without any API call.
 
-### Installation
+## Installation
 
-```
+```bash
 npm install iptocountry
 ```
 
-### Usage
+## Usage
 
-##### REST API
+### REST API
 
-```
+```bash
 npm start
-```
-See `http://localhost:12080/search?ip=74.125.225.71` or `http://localhost:12080/search?ip=74.125.225.71,98.138.253.109`
 
-##### Download IP database
+# See http://localhost:12080/search?ip=74.125.225.71
+# See http://localhost:12080/search?ip=74.125.225.71,98.138.253.109
+```
+
+### Download IP database
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -34,7 +36,7 @@ if(ip2co.dbCSVCheckExp(48)) {
 // done!
 ```
 
-##### Search IP addresses
+### Search IP addresses
 
 ```javascript
 var ip2co = require('iptocountry');
@@ -78,36 +80,37 @@ if(!ipSearch.error) {
 */
 ```
 
-##### Listen HTTP requests
+### Listen HTTP requests
 
 ```javascript
 var ip2co = require('iptocountry');
 
 ip2co.dbLoad();
 ip2co.listenHTTP({hostname: 'localhost', 'port': 12080});
+
+// See http://localhost:12080/search?ip=74.125.225.71
 ```
-See `http://localhost:12080/search?ip=74.125.225.71`
 
 For performance test; `ab -n 1000 http://localhost:12080/search?ip=74.125.225.71`
 
-### Notes
+## Notes
 
 * It uses [Webnet77](http://software77.net/geo-ip/) for IP database file. It represents
   the over 4 billion IPV4 numbers as well as the virtually inexhaustible IPV6 range (3.4e+38).
   There is limit for downloads, for more information see [FAQ](http://software77.net/faq.html)
 
-#### Implementations
+### Implementations
 
 - [x] IPv4
 - [ ] IPv6
 
-### License
+## License
 
 Licensed under The MIT License (MIT)  
 For the full copyright and license information, please view the LICENSE.txt file.
 
 [npm-url]: http://npmjs.org/package/iptocountry
-[npm-image]: https://badge.fury.io/js/iptocountry.png
+[npm-image]: https://badge.fury.io/js/iptocountry.svg
 
-[travis-url]: https://travis-ci.org/cmfatih/iptocountry
-[travis-image]: https://travis-ci.org/cmfatih/iptocountry.svg?branch=master
+[travis-url]: https://travis-ci.org/devfacet/iptocountry
+[travis-image]: https://travis-ci.org/devfacet/iptocountry.svg?branch=master

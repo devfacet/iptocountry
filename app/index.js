@@ -1,14 +1,19 @@
+/*
+ * IP to Country
+ * For the full copyright and license information, please view the LICENSE.txt file.
+ */
+
 /* jslint node: true */
 'use strict';
 
 var ip2co  = require('../'),
     utilex = require('utilex');
 
-var appArgs   = utilex.appArgs(),
+var appArgs   = utilex.args(),
     appConfig = {isHeapdump: false, listenOpt: {http: {hostname: '0.0.0.0', port: 12080}}};
 
 // config
-if(typeof appArgs['heapdump'] !== 'undefined') {
+if(typeof appArgs.heapdump !== 'undefined') {
   var heapdump = require('heapdump');
   appConfig.isHeapdump = true;
 }
@@ -31,7 +36,7 @@ if(ip2co.dbCSVCheckExp(48)) {
   ip2co.dbGet().then(function() {
     loadAndServe();
   }, function(err) {
-    utilex.conLog(err);
+    console.log(err);
   });
 } else {
   loadAndServe();

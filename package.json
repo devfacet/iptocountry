@@ -1,41 +1,30 @@
 {
   "name": "iptocountry",
   "version": "1.0.1",
-  "description": "IP to Country module can be used for detecting country information of IP addresses without any API call.",
-  "keywords": [
-    "ip",
-    "country",
-    "lookup"
-  ],
-  "homepage": "http://github.com/cmfatih/iptocountry",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cmfatih/iptocountry.git"
-  },
-  "bugs": {
-    "url": "http://github.com/cmfatih/iptocountry/issues"
-  },
-  "license": "MIT",
-  "private": false,
-  "author": {
-    "name": "cmfatih",
-    "url": "http://github.com/cmfatih"
-  },
-  "contributors": [],
+  "description": "A module for detecting country information of IP addresses without any API call",
   "main": "lib/iptocountry.js",
   "scripts": {
     "start": "node app/index.js",
     "test": "node node_modules/mocha/bin/mocha --reporter spec test/test-all.js"
   },
-  "engines": [
-    "node >= 0.10.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devfacet/iptocountry.git"
+  },
+  "keywords": [
+    "ip",
+    "country",
+    "lookup"
   ],
+  "author": "devfacet",
+  "license": "MIT",
+  "homepage": "http://github.com/devfacet/iptocountry",
   "dependencies": {
-    "utilex": "1.0.x",
-    "q": "1.0.x"
+    "utilex": "3.x.x",
+    "q": "1.4.x"
   },
   "devDependencies": {
-    "mocha": "2.2.x",
-    "chai": "2.1.x"
+    "mocha": "3.2.x",
+    "chai": "3.5.x"
   }
 }
